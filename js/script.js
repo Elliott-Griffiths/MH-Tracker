@@ -36,6 +36,14 @@ const getGreeting = () => {
 
 // Load form section action
 const loadSection = async (section, label, eventData) => {
+  const navIDs = ["homeLink", "recordLink", "detailsLink", "profileLink"];
+
+  // Iterate over the navIDs array
+  navIDs.forEach((id) => {
+    const element = document.getElementById(id); // Get the element by its ID
+    if (element) element.classList.remove("active");
+  });
+
   try {
     // Load the HTML content for the specified section
     const response = await fetch(`html/${section}.html`);
@@ -60,7 +68,8 @@ const sectionLoadedEventHandler = (section, label, eventData) => {
   if (section === 'home') {
     // Update the greeting message in the 'home' section
     document.getElementById("greeting").textContent = `${getGreeting()}, ${username}`;
-    
+    document.getElementById('homeLink').classList.add('active'); 
+      
     // Fetch the graphs asynchronously in the 'home' section
     (async () => {
       for (const graph of graphs) {
@@ -70,6 +79,8 @@ const sectionLoadedEventHandler = (section, label, eventData) => {
   }
   
   if (section === 'record_event') {
+    document.getElementById('recordLink').classList.add('active');   
+
     // Set the default date value to today's date in the 'record_event' section
     const dateInput = document.getElementById('date');
     const today = new Date();
@@ -96,6 +107,8 @@ const sectionLoadedEventHandler = (section, label, eventData) => {
   }
   
   if (section === 'view_events') {
+    document.getElementById('detailsLink').classList.add('active'); 
+      
     // Update the event title in the 'view_events' section
     document.getElementById("event-title").textContent = label;
     
@@ -122,6 +135,10 @@ const sectionLoadedEventHandler = (section, label, eventData) => {
       th.setAttribute('scope', 'col');
     });
   }
+    
+    if (section === 'view_events') {
+      document.getElementById('profileLink').classList.add('active');
+    }
 };
 
 // Format date
