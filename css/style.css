@@ -1,0 +1,350 @@
+/* Set the character encoding to UTF-8 */
+@charset "UTF-8";
+
+/* Define global CSS variables */
+:root {
+  --color-primary: #FFD56F; /* Primary color */
+  --color-black: #212121; /* Black color */
+  --color-grey: #5D5D5D; /* Grey color */
+  --color-white: #FBFBFB; /* White color */
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-black); }
+
+/* Reset styles for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set box-sizing and font styles for the root element */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Set the base font size to 10px (1rem = 10px) */
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--color-grey);
+  background-color: var(--color-white);
+  scroll-behavior: smooth;
+}
+
+/* Styling for text selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-grey);
+}
+
+/* Body styles */
+.body {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Header styles */
+.header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 12vh;
+  width: 100%;
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+  border-bottom: 0.4rem solid var(--color-primary);
+}
+
+/* Main content styles */
+.main {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 12vh 0;
+  width: 100%;
+}
+
+/* Form styles */
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 76vh;
+  padding: 2.5vh 5vw;
+  color: var(--color-grey);
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+}
+
+/* Additional information within the form */
+.form-information {
+  margin-top: 1rem;
+}
+
+/* Styles for form fields */
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Label styles for form fields */
+.form-field__label {
+  position: relative;
+  padding-bottom: 0.2rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
+  color: var(--color-grey);
+}
+
+/* Input styles for form fields */
+.form-field__input {
+  position: relative;
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 1rem;
+  height: 4rem;
+  border: 0.2rem solid var(--color-grey);
+  border-radius: 0.5rem;
+  color: var(--color-grey);
+}
+
+/* Focus styles for form fields */
+.form-field__input:focus {
+  outline: 0.4rem solid var(--color-primary);
+  box-shadow: 0 0 2rem var(--color-primary);
+}
+
+/* Container styles for checkboxes in form fields */
+.form-field__checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  margin: -0.4rem 1.2rem 0 0.4rem;
+  outline: 0.2rem solid var(--color-grey);
+  outline-offset: 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Focus styles for checkboxes */
+input[type="checkbox"]:focus {
+  outline: 0.2rem solid var(--color-grey);
+  box-shadow: 0 0 2rem var(--color-primary);
+}
+
+/* Checked state styles for checkboxes */
+input[type="checkbox"]:checked {
+  background: var(--color-primary);
+}
+
+/* Button styles for form fields */
+.form-field__button {
+  position: relative;
+  margin-top: auto;
+  padding: 1rem 0;
+  height: 5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  border: 0.2rem solid var(--color-grey);
+  border-radius: 0.5rem;
+  color: var(--color-grey);
+}
+
+/* Hover, focus, and active styles for form field buttons */
+.form-field__button:hover,
+.form-field__button:focus,
+.form-field__button:active {
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 2rem var(--color-primary);
+}
+
+/* Button styles */
+.button {
+  margin-top: 4rem;
+  height: 7.5rem;
+}
+
+/* Top button styles */
+.button-top {
+  margin-top: 50%;
+}
+
+/* Graph container styles */
+.graph-container {
+  padding: 3rem 0;
+}
+
+/* Styling for graph container except the last child */
+.graph-container:not(:last-child) {
+  border-bottom: 0.1rem solid var(--color-grey);
+}
+
+/* Table container styles within a form field */
+.form-field__table-container {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* Table styles within a form field */
+.form-field__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Table caption styles within a form field */
+.form-field__table-caption {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Table header styles */
+thead th {
+  position: relative;
+  background-color: var(--color-white);
+}
+
+/* Table cell styles */
+th,
+td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 0.1rem solid var(--color-grey);
+}
+
+/* Table header styles */
+th {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Alternate row background color for table body */
+tbody tr:nth-child(even) {
+  background-color: var(--color-primary);
+}
+
+/* First column styles within a table */
+.form-field__table td:first-child {
+  text-align: left;
+}
+
+/* Second column styles within a table */
+.form-field__table td:nth-child(2) {
+  text-align: center;
+}
+
+/* Footer styles */
+.footer {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 12vh;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+/* Footer navigation styles */
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-template-rows: max-content;
+  grid-column-gap: 3vw;
+  justify-content: center;
+  align-items: stretch;
+  justify-items: stretch;
+  align-content: center;
+  border-top: 0.4rem solid var(--color-grey);
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
+/* Footer navigation item styles */
+.footer-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 7rem;
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--color-grey);
+  border-radius: 0.5rem;
+}
+
+/* Footer navigation label styles */
+.footer-nav__label {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Active state styles for footer navigation items */
+.active {
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+}
+
+/* Copywrite section styles */
+.copywrite {
+  margin: auto;
+  text-align: center;
+}
+
+/* Highlighted text styles */
+.highlight,
+.copywrite a,
+.copywrite a:visited {
+  padding: 0.5rem;
+  line-height: 3rem;
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+  border-radius: 0.5rem;
+}
+
+/* Hover and active styles for copywrite links */
+.copywrite a:hover,
+.copywrite a:active {
+  color: var(--color-grey);
+  background-color: var(--color-primary);
+}
+
+/* Hidden element styles */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,22 @@
+<form id="form" class="form" onsubmit="createUserBtn(event)">
+    <h2 class="h2">Create account</h2>
+    <p class="form-information">Enter your details.</p>
+    <div class="form-field">
+        <label for="username" class="form-field__label">Username:</label>
+        <input type="text" class="form-field__input" id="username" name="username" aria-label="Username" required />
+        <span class="form-field__help-text">Must contain letters and numbers</span>
+    </div>
+    <div class="form-field">
+        <label for="password" class="form-field__label">Password:</label>
+        <input type="password" class="form-field__input" id="password" name="password" aria-label="Password" required />
+        <span class="form-field__help-text">Must be between 8-120 character</span>
+    </div>
+    <div class="form-field">
+        <label for="confirm-password" class="form-field__label">Confirm Password:</label>
+        <input type="password" class="form-field__input" id="confirm-password" name="confirm-password"
+            aria-label="Confirm password" required />
+        <span class="form-field__help-text">Must be between 8-120 character</span>
+    </div>
+    <div id="alert-message" class="hidden alert alert-danger">Passwords do not match.</div>
+    <button type="submit" class="form-field__button" aria-label="Create user">Create account</button>
+</form>

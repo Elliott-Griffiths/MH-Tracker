@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BROWSER TAB -->
+    <title>SymptomSense</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/5ce464ef98.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-+Btk6H+8P9w08YUx4KdLYaIn0ylcTL0fH2RXR82+u1fnIw/ViPOdNBRQkNS4jPRmo3YR0NqgPrl7pIYrVAtF7w=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SCRIPT -->
+    <script src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <header id="header" class="header">
+        <h1><i class="fa-solid fa-brain"></i> SymptomSense</h1>
+    </header>
+    <main id="main" class="main">
+        <form id="form" class="form" onsubmit="userActionBtn(event)">
+            <div class="form-field">
+                <input type="submit" id="loginBtn" class="form-field__button button button-top" value="Login"
+                    aria-label="Login" />
+                <input type="submit" id="createBtn" class="form-field__button button" value="Create account"
+                    aria-label="Create account" />
+            </div>
+        </form>
+    </main>
+    <footer id="footer" class="footer">
+        <nav id="footer-nav" class="footer-nav hidden">
+            <a id="homeLink" class="footer-nav__item">
+                <i class="fas fa-home" aria-label="Home"></i>
+                <span class="footer-nav__label">Home</span>
+            </a>
+            <a id="recordLink" class="footer-nav__item">
+                <i class="fa-sharp fa-solid fa-clipboard"></i>
+                <span class="footer-nav__label">Record</span>
+            </a>
+            <a id="detailsLink" class="footer-nav__item">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="footer-nav__label">Details</span>
+            </a>
+            <a id="profileLink" class="footer-nav__item">
+                <i class="fas fa-user" aria-label="Profile"></i>
+                <span class="footer-nav__label">Profile</span>
+            </a>
+        </nav>
+        <p id="copywrite" class="copywrite">
+            Designed and created by <span class="highlight">Elliott Griffiths</span>.
+            <br>Powered by <a href="https://pixe.la/">Pixela</a>.
+            <!--i class="fa-regular fa-copyright"></i> <span id="Year">2023</span-->
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<form id="form" class="form" onsubmit="retrieveEventBtn(event)">
+    <h2 class="h2">Retrieve Events</h2>
+    <p class="form-information">Enter the ditails of what you would like to view.</p>
+    <div class="form-field">
+        <label for="selection" class="form-field__label">Select an event</label>
+        <select class="form-field__input" id="selection" name="selection" aria-label="Select an option" required>
+            <option value="">Select a recordt</option>
+            <option value="graph1">Heat Surge</option>
+            <option value="graph2">Hot Cheeks / Face</option>
+            <option value="graph3">Nausea/Sickness, Headache, Chest/Stomach Pains</option>
+            <option value="graph4">Crying Bursts</option>
+            <option value="graph5">Foreboding, Scared, Losing Mind, Unable to Carry on</option>
+            <option value="graph6">Positive Moments</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="date-from" class="form-field__label">View events from</label>
+        <input type="date" class="form-field__input" id="date-from" name="date-from">
+        <span class="form-field__help-text">(optional)</span>
+    </div>
+    <div class="form-field">
+        <label for="date-to" class="form-field__label">View events up to</label>
+        <input type="date" class="form-field__input" id="date-to" name="date-to">
+        <span class="form-field__help-text">(optional)</span>
+    </div>
+    <button type="submit" class="form-field__button">Retrieve Events</button>
+</form>

@@ -1,0 +1,18 @@
+<form id="form" class="form" onsubmit="userLoginBtn(event)">
+    <h2 class="h2">User login</h2>
+    <p class="form-information">
+    <p class="form-information">Enter your login details.</p>
+    </p>
+    <div class="form-field">
+        <label for="username" class="form-field__label">Username:</label>
+        <input type="text" class="form-field__input" id="username" name="username" required />
+    </div>
+    <div class="form-field">
+        <label for="password" class="form-field__label">Password:</label>
+        <input type="password" class="form-field__input" id="password" name="password" required />
+    </div>
+    <div class="form-field hidden" id="failed-login">
+        <p>Authentication failed. Please check your username and password.</p>
+    </div>
+    <button type="submit" class="form-field__button">Login</button>
+</form>

@@ -1,0 +1,20 @@
+<form id="form" class="form" onsubmit="viewEventsBtn(event)">
+    <h2 class="h2">View Events</h2>
+    <div class="form-field">
+        <div class="form-field__table-container">
+            <table role="table" class="form-field__table" id="data-table" aria-label="Data Table">
+                <caption class="form-field__table-caption" id="event-title">Data Table</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button type="submit" class="form-field__button">Retrieve another</button>
+</form>
